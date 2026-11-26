@@ -1,11 +1,14 @@
 import express from 'express';
-import animaliRouter from './routes/animali-router.js'
+import animalsRouter from './routes/animals-router.js'
+import dispencersRouter from './routes/dispencers-router.js'
 
 const app = express();
 const port = 3000;
 app.use(express.static('public'));
 
-app.use(animaliRouter);
+app.use(animalsRouter);
+app.use(dispencersRouter);
+
 
 app.use((req,res,next) =>{
     res.setHeader('Content-Type', 'text/plain');
@@ -13,5 +16,5 @@ app.use((req,res,next) =>{
 })
 
 app.listen(port, () => {
-    console.log('Server is running on port '); 
+    console.log('Server is running on port '+port); 
 })
