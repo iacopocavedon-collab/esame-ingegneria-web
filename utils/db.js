@@ -4,5 +4,5 @@ export const connection = await createConnection({ //creazione connessione
     host: "localhost",
     user: "root",
     password: "",
-    database: "zoo",
+    database: "pietrooo",
 })

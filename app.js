@@ -1,13 +1,15 @@
 import express from 'express';
 import animalsRouter from './routes/animals-router.js'
-import dispencersRouter from './routes/dispencers-router.js'
+import enclosuresRouter from './routes/enclosures-router.js'
 
 const app = express();
 const port = 3000;
 app.use(express.static('public'));
 
 app.use(animalsRouter);
-app.use(dispencersRouter);
+app.use(enclosuresRouter);
+
+
 
 
 app.use((req,res,next) =>{
